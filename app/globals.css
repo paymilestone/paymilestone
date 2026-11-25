@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+
+  --color-primary-green: #0e5e5a;
+  --color-light-primary-green: #dceeeb;
+  --color-light-gold: #f5ead4;
+  --color-gold: #b07a1c;
+  --color-light-blue: #e1eafa;
+  --color-dark-blue: #2d64c8;
+  --color-subtle-grey: #f5f8f7;
+  --color-subtle-danger: #f9e0de;
+  --color-danger: #bf3328;
+
+  --gradient-hero: linear-gradient(180deg, #dceeeb 0%, #f1f7f5 50%, #ffffff 100%);
+  --gradient-card-green: linear-gradient(180deg, #dceeeb 0%, #f5f8f7 100%);
+  --gradient-card-gold: linear-gradient(180deg, #f5ead4 0%, #fbf7ee 100%);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--color-primary-green);
+  --color-primary-light: var(--color-light-primary-green);
+  --color-gold: var(--color-gold);
+  --color-gold-light: var(--color-light-gold);
+  --color-blue: var(--color-dark-blue);
+  --color-blue-light: var(--color-light-blue);
+  --color-subtle: var(--color-subtle-grey);
+  --color-danger: var(--color-danger);
+  --color-danger-subtle: var(--color-subtle-danger);
+  --font-sans: var(--font-manrope);
+}
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -48%) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
